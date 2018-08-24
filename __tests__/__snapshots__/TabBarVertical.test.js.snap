@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a vertical tab bar 1`] = `
+<Component
+  collapsable={false}
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "overflow": "hidden",
+      },
+      Array [
+        Object {
+          "flex": 1,
+        },
+      ],
+    ]
+  }
+>
+  <TabBarVertical
+    getAccessibilityLabel={[Function]}
+    getAccessible={[Function]}
+    getLabelText={[Function]}
+    getTestID={[Function]}
+    indicatorStyle={
+      Object {
+        "backgroundColor": "#ffeb3b",
+      }
+    }
+    jumpTo={[Function]}
+    labelStyle={
+      Object {
+        "color": "#fff",
+        "fontWeight": "400",
+      }
+    }
+    layout={
+      Object {
+        "height": 600,
+        "measured": false,
+        "width": 800,
+      }
+    }
+    navigationState={
+      Object {
+        "index": 1,
+        "routes": Array [
+          Object {
+            "key": "article",
+            "title": "Article",
+          },
+          Object {
+            "key": "contacts",
+            "title": "Contacts",
+          },
+          Object {
+            "key": "albums",
+            "title": "Albums",
+          },
+          Object {
+            "key": "chat",
+            "title": "Chat",
+          },
+        ],
+      }
+    }
+    offsetX={-800}
+    panX={0}
+    position={1}
+    scrollEnabled={true}
+    style={
+      Object {
+        "backgroundColor": "#3f51b5",
+      }
+    }
+    tabStyle={
+      Object {
+        "height": 80,
+        "width": 180,
+      }
+    }
+    useNativeDriver={false}
+  />
+  <Component
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <PagerScroll
+      canJumpToTab={[Function]}
+      getTestID={[Function]}
+      jumpTo={[Function]}
+      layout={
+        Object {
+          "height": 600,
+          "measured": false,
+          "width": 800,
+        }
+      }
+      navigationState={
+        Object {
+          "index": 1,
+          "routes": Array [
+            Object {
+              "key": "article",
+              "title": "Article",
+            },
+            Object {
+              "key": "contacts",
+              "title": "Contacts",
+            },
+            Object {
+              "key": "albums",
+              "title": "Albums",
+            },
+            Object {
+              "key": "chat",
+              "title": "Chat",
+            },
+          ],
+        }
+      }
+      offsetX={-800}
+      panX={0}
+      position={1}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+      useNativeDriver={false}
+    >
+      <SceneComponent
+        component={[Function]}
+        jumpTo={[Function]}
+        key="article"
+        route={
+          Object {
+            "key": "article",
+            "title": "Article",
+          }
+        }
+      />
+      <SceneComponent
+        component={[Function]}
+        jumpTo={[Function]}
+        key="contacts"
+        route={
+          Object {
+            "key": "contacts",
+            "title": "Contacts",
+          }
+        }
+      />
+      <SceneComponent
+        component={[Function]}
+        jumpTo={[Function]}
+        key="albums"
+        route={
+          Object {
+            "key": "albums",
+            "title": "Albums",
+          }
+        }
+      />
+      <SceneComponent
+        component={[Function]}
+        jumpTo={[Function]}
+        key="chat"
+        route={
+          Object {
+            "key": "chat",
+            "title": "Chat",
+          }
+        }
+      />
+    </PagerScroll>
+  </Component>
+</Component>
+`;

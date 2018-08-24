@@ -35,6 +35,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+example/node_modules/
 
 # TypeScript v1 declaration files
 typings/
@@ -59,3 +60,6 @@ typings/
 
 # next.js build output
 .next
+
+# ide files
+.idea

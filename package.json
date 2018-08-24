@@ -1,0 +1,74 @@
+{
+  "name": "react-native-vertical-tab-view",
+  "version": "0.1.0",
+  "description": "Vertical & Horizontal Tab view component for React Native",
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "test": "jest",
+    "flow": "flow",
+    "lint": "eslint .",
+    "precommit": "yarn lint && yarn flow && yarn test"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "tab",
+    "swipe",
+    "scrollable",
+    "coverflow"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaKaZ/react-native-vertical-tab-view.git"
+  },
+  "author": "Michael S. Kazmier <dakazmier@gmail.com> (https://github.com/DaKaZ/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DaKaZ/react-native-vertical-tab-view/issues"
+  },
+  "homepage": "https://github.com/DaKaZ/react-native-vertical-tab-view.git#readme",
+  "dependencies": {
+    "react-native-tab-view": "^1.0.2"
+  },
+  "devDependencies": {
+    "@expo/vector-icons": "^6.3.1",
+    "babel-jest": "^22.4.4",
+    "babel-preset-react-native": "^4.0.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "eslint": "^4.19.1",
+    "eslint-config-satya164": "^1.0.2",
+    "eslint-plugin-react-native-globals": "^0.1.2",
+    "flow-bin": "~0.67.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.4",
+    "prettier": "^1.13.4",
+    "react": "16.3.1",
+    "react-dom": "16.3.1",
+    "react-native": "~0.55.4",
+    "react-test-renderer": "16.3.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/__setup__/enzyme.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}

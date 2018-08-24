@@ -1,0 +1,29 @@
+{
+  "name": "verticalTabViewExample",
+  "version": "0.0.1",
+  "private": true,
+  "main": "App.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^6.3.1",
+    "expo": "~27.0.2",
+    "react": "16.3.1",
+    "react-native": "~0.55.4",
+    "react-native-gesture-handler": "^1.0.1",
+    "react-native-tab-view": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-expo": "^4.0.0",
+    "glob-to-regexp": "^0.4.0",
+    "react-native-scripts": "1.13.1"
+  },
+
+  "resolutions": {
+    "**/react": "16.3.1"
+  }
+}

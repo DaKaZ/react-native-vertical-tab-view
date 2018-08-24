@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "React Native Vertical Tab View Demo",
+    "description": "Demonstrates the various capabilities of react-native-vertical-tab-view",
+    "slug": "react-native-vertical-tab-view-demo",
+    "sdkVersion": "27.0.0",
+    "version": "1.0.0",
+    "primaryColor": "#2196f3",
+    "icon": "assets/icon.png",
+    "loading": {
+      "icon": "assets/icon.png",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "ttf"
+      ],
+      "config": "./rn-cli.config.js",
+      "projectRoots": ""
+    }
+  }
+}
