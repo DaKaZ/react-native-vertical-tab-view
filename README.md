@@ -8,7 +8,7 @@ this into a stand alone library.
 This library is API compatible with react-native-tab-view and can be used as a drop in replacement as it re-exports all
 of the named exports from react-native-tab-view.
 
-[[https://github.com/DaKaZ/react-native-vertical-tab-view/blob/master/example/assets/VerticalTabView.gif|alt=VerticalTabView]]
+[[https://github.com/DaKaZ/react-native-vertical-tab-view/blob/master/example/assets/VerticalTabView.gif]]
 
 
 ## Installation ##
@@ -100,7 +100,7 @@ for help getting the orientation setup, then look at an implementation like this
 ```javascript
 class TabsScreen extends PureComponent<PropsType, StateType> {
   static defaultProps = {
-    screenProps: { orientation: 'PORTRAIT' }
+    orientation: 'PORTRAIT'
   };
 
   constructor(props: PropsType) {
