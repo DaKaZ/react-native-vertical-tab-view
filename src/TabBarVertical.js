@@ -74,14 +74,10 @@ export default class TabBarVertical<T: *> extends React.Component<
         initialVisibility = 0;
       }
     }
-
     const initialOffset =
-      this.props.scrollEnabled && this.props.layout.width
+      props.scrollEnabled && props.layout.width
         ? {
-            y: this._getScrollAmount(
-              this.props,
-              this.props.navigationState.index
-            ),
+            y: this._getScrollAmount(props, props.navigationState.index),
             x: 0,
           }
         : undefined;

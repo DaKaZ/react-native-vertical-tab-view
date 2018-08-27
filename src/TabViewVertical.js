@@ -63,7 +63,6 @@ export default class TabViewVertical<T: *> extends React.Component<
       ...this.props.initialLayout,
       measured: false,
     };
-
     const panX = new Animated.Value(0);
     const offsetX = new Animated.Value(-navigationState.index * layout.width);
     const layoutXY = new Animated.ValueXY({
@@ -189,6 +188,10 @@ export default class TabViewVertical<T: *> extends React.Component<
     } = this.props;
 
     const props = this._buildSceneRendererProps();
+    const tabBarLayout = {
+      ...this.state.windowLayout,
+      width: this.state.windowLayout.width - this.state.sceneLayout.width,
+    };
 
     return (
       <View
@@ -197,7 +200,7 @@ export default class TabViewVertical<T: *> extends React.Component<
         style={[styles.container, this.props.style]}
       >
         {(tabBarPosition === 'top' || tabBarPosition === 'left') &&
-          renderTabBar(props)}
+          renderTabBar({ ...props, layout: tabBarLayout })}
         <View onLayout={this._handleLayoutScene} style={styles.pager}>
           {renderPager({
             ...props,
@@ -220,7 +223,7 @@ export default class TabViewVertical<T: *> extends React.Component<
           })}
         </View>
         {(tabBarPosition === 'bottom' || tabBarPosition === 'right') &&
-          renderTabBar(props)}
+          renderTabBar({ ...props, layout: tabBarLayout })}
       </View>
     );
   }
