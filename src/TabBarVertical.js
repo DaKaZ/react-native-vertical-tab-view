@@ -24,20 +24,22 @@ type IndicatorProps<T> = SceneRendererProps<T> & {
 
 type Props<T> = SceneRendererProps<T> & {
   scrollEnabled?: boolean,
+  allowBorder?: boolean,
   bounces?: boolean,
   pressColor?: string,
   pressOpacity?: number,
-  getLabelText: (scene: Scene<T>) => ?string,
-  getAccessible: (scene: Scene<T>) => ?boolean,
-  getAccessibilityLabel: (scene: Scene<T>) => ?string,
-  getTestID: (scene: Scene<T>) => ?string,
+  getLabelText: (scene: Scene<T>) =>?string,
+  getAccessible: (scene: Scene<T>) =>?boolean,
+  getAccessibilityLabel: (scene: Scene<T>) =>?string,
+  getTestID: (scene: Scene<T>) =>?string,
   renderLabel?: (scene: Scene<T>) => React.Node,
   renderIcon?: (scene: Scene<T>) => React.Node,
   renderBadge?: (scene: Scene<T>) => React.Node,
-  renderIndicator?: (props: IndicatorProps<T>) => React.Node,
+  c?: (props: IndicatorProps<T>) => React.Node,
   onTabPress?: (scene: Scene<T>) => mixed,
   tabStyle?: ViewStyleProp, // Be sure to include height!
   indicatorStyle?: ViewStyleProp,
+  borderStyle?: ViewStyleProp,
   labelStyle?: TextStyleProp,
   style?: ViewStyleProp,
 };
@@ -431,6 +433,30 @@ export default class TabBarVertical<T: *> extends React.Component<
               const tabStyle = {};
 
               tabStyle.opacity = opacity;
+
+              if (allowBorder) {
+
+                const borderStyleProps = Object.keys(this.props.borderStyle);
+                let borderWidth = 0;
+                let borderWidthProp = borderStyleProps.filter((prop) => prop.indexOf('Width') != -1)[0];
+
+                borderWidth = this.props.borderStyle[borderWidthProp];
+
+                outputRange = inputRange.map(
+                  inputIndex => (inputIndex === i ? parseInt(borderWidth) : 0)
+                );
+
+                borderWidth = Animated.multiply(
+                  this.state.visibility,
+                  position.interpolate({
+                    inputRange,
+                    outputRange,
+                  })
+                );
+                
+                tabStyle = Object.assign(tabStyle, StyleSheet.flatten(borderStyle))
+                tabStyle[borderWidthProp] = borderWidth;
+              }
 
               if (icon) {
                 if (label) {
