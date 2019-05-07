@@ -441,19 +441,22 @@ export default class TabBarVertical<T: *> extends React.Component<
               }
 
               const passedTabStyle = StyleSheet.flatten(this.props.tabStyle);
-              const isWidthSet =
+
+              const isHeightSet =
                 (passedTabStyle &&
-                  typeof passedTabStyle.width !== 'undefined') ||
+                  typeof passedTabStyle.height !== 'undefined') ||
                 scrollEnabled === true;
+
               const tabContainerStyle = {};
 
-              if (isWidthSet) {
-                tabStyle.width = tabWidth;
+              if (isHeightSet) {
+                tabStyle.height = tabHeight;
+                tabContainerStyle.height = tabHeight;
               }
 
               if (passedTabStyle && typeof passedTabStyle.flex === 'number') {
                 tabContainerStyle.flex = passedTabStyle.flex;
-              } else if (!isWidthSet) {
+              } else if (!isHeightSet) {
                 tabContainerStyle.flex = 1;
               }
 
