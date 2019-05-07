@@ -1,6 +1,6 @@
 {
   "name": "react-native-vertical-tab-view",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vertical & Horizontal Tab view component for React Native",
   "main": "src/index.js",
   "files": [
