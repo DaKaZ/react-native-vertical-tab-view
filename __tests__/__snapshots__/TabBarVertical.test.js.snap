@@ -40,7 +40,7 @@ exports[`renders a vertical tab bar 1`] = `
       Object {
         "height": 600,
         "measured": false,
-        "width": 800,
+        "width": 0,
       }
     }
     navigationState={
